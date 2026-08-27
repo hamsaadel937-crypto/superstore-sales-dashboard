@@ -1,80 +1,161 @@
 # 📊 Superstore Sales & Profitability Analysis
 
-تحليل بيانات مبيعات متجر "Superstore" من التنظيف الأولي وصولًا إلى داشبورد تفاعلي في Power BI، بهدف اكتشاف العوامل المؤثرة على الربحية عبر الفئات، المناطق، والخصومات.
+An end-to-end **Data Analytics project** using Python, Pandas, Power BI, and DAX to analyze sales performance, profitability, discounts, products, and regional trends.
 
 ---
 
-## 🎯 هدف المشروع
+## 🎯 Project Overview
 
-الإجابة على سؤال رئيسي: **ليه المتجر بيحقق مبيعات عالية لكن هامش الربح مش بنفس القوة؟**
+The goal of this project is to analyze the Superstore dataset and answer key business questions such as:
 
-من خلال تحليل شامل لـ 10,800+ عملية بيع، تم تحديد الفئات الخسرانة، تأثير الخصومات على الربح، والفروقات الجغرافية والموسمية في الأداء.
+- How are sales and profit performing?
+- Which categories and sub-categories are most and least profitable?
+- How do discounts affect profitability?
+- Which regions generate the highest sales and profit?
+- Which products contribute most to the business?
+- Which months show the strongest sales performance?
 
----
-
-## 🗂️ محتويات المشروع
-
-| الملف | الوصف |
-|---|---|
-| `superstore_raw.csv` | البيانات الأصلية قبل التنظيف |
-| `01_clean_explore.py` | سكريبت Python (pandas) لتنظيف البيانات واستكشافها الأولي |
-| `superstore_clean.csv` | البيانات بعد التنظيف، جاهزة للاستخدام في Power BI |
-| `Products.pbix` | ملف Power BI الكامل (الداشبورد التفاعلي) |
-| `screenshots/` | لقطات شاشة لكل صفحة من الداشبورد |
+The analysis combines **Python-based data preparation and exploration** with an interactive **Power BI dashboard**.
 
 ---
 
-## 🧹 خطوات تنظيف البيانات
+## 🛠️ Tools & Technologies
 
-- اكتشاف وحذف **806 صف** تالف (قيم فاضية في الأعمدة الأساسية: التاريخ، المبيعات، الفئة، المنطقة)
-- حذف **504 صف مكرر**
-- تصحيح أنواع الأعمدة (تحويل التواريخ من نص إلى Date)
-- إضافة أعمدة مشتقة: مدة الشحن (Shipping Days)، السنة، الشهر
-
-**الناتج:** 9,994 صف نظيف وصالح للتحليل.
-
----
-
-## 📈 أبرز النتائج (Key Insights)
-
-- **إجمالي المبيعات:** $2,297,200 بهامش ربح عام 12.47%
-- **أكتر فئة فرعية خسارة:** Tables، بخسارة تقارب -17,725$
-- **تأثير الخصم على الربح:** الخصومات فوق 40% بتحول متوسط الربح لخسارة فعلية (من متوسط ربح 67$ بدون خصم، لخسارة -107$ مع خصم 40%+)
-- **أقوى منطقة مبيعًا:** West بإجمالي مبيعات $725K
-- **موسمية واضحة:** نوفمبر وديسمبر هما أعلى شهرين مبيعًا في كل سنة تقريبًا
+| Tool | Purpose |
+|------|---------|
+| 🐍 Python | Data cleaning & exploration |
+| 🐼 Pandas | Data manipulation |
+| 📊 Power BI | Interactive dashboard |
+| 🧮 DAX | Measures & calculations |
+| 📁 CSV | Dataset storage |
 
 ---
 
-## 📊 صفحات الداشبورد
+## 🔄 Project Workflow
 
-1. **Overview** — مؤشرات الأداء الرئيسية (KPIs)، اتجاه المبيعات الزمني، والربح حسب الفئة الفرعية
-2. **Products & Customers** — أفضل المنتجات مبيعًا، توزيع العملاء، وتوزيع المبيعات جغرافيًا
-3. **Discount Impact on Profit** — العلاقة بين نسبة الخصم والربحية
-4. **Deep Dive** — تحليلات إضافية: متوسط الربح حسب مستوى الخصم، أداء طرق الشحن، واتجاه المبيعات حسب الفئة عبر الزمن
+```text
+Raw Data
+   ↓
+Data Cleaning
+   ↓
+Exploratory Data Analysis
+   ↓
+Business Analysis
+   ↓
+Power BI Dashboard
+   ↓
+Insights & Recommendations
+🧹 Data Preparation
 
----
+The dataset was cleaned and prepared using Python and Pandas.
 
-## 🛠️ الأدوات المستخدمة
+Main preprocessing steps included:
 
-- **Python (pandas)** — تنظيف البيانات والاستكشاف الأولي
-- **Power BI Desktop** — بناء نموذج البيانات، مقاييس DAX، والداشبورد التفاعلي
+Checking missing values
+Checking duplicate records
+Validating data types
+Cleaning inconsistent values
+Preparing the dataset for Power BI
+Exporting the cleaned dataset
+Dataset Files
+superstore_raw.csv → Original dataset
+superstore_clean.csv → Cleaned dataset
+📈 Key Analysis Areas
+💰 Sales & Profitability
 
----
+Analyzed:
 
-## 🚀 طريقة تشغيل المشروع
+Total Sales
+Total Profit
+Profit Margin
+Sales by Category
+Profit by Category
+Sales by Region
+🏷️ Discount Analysis
 
-1. حمّل `superstore_clean.csv`
-2. افتح `Products.pbix` في Power BI Desktop
-3. لو طلب تحديث مصدر البيانات، اربطه بمسار `superstore_clean.csv` على جهازك
+Investigated the relationship between discount levels and profitability.
 
----
+The analysis shows that higher discount levels are strongly associated with lower profitability, with heavy discounts potentially turning profitable transactions into losses.
 
-## 📌 مصدر البيانات
+📦 Product Analysis
 
-Sample Superstore Dataset (متاح على Kaggle)
+Identified:
 
----
+Most profitable products
+Least profitable products
+High-sales but low-profit products
+Loss-making sub-categories
+🌍 Regional Analysis
 
-## 👤 عن المشروع
+Compared sales and profitability across different regions to identify the strongest and weakest performing markets.
 
-مشروع بورتفوليو لتطوير مهارات تحليل البيانات من البداية للنهاية: تنظيف، استكشاف، بناء نموذج، وتصميم داشبورد تفاعلي.
+📅 Time Analysis
+
+Analyzed monthly and yearly sales trends to identify periods of stronger business performance.
+
+💡 Key Insights
+
+Based on the analysis:
+
+📊 Overall Profit Margin is approximately 12.47%.
+🏷️ High discount levels are associated with significantly lower profit.
+📦 Some sub-categories generate high sales but weak or negative profitability.
+🌎 The West region shows strong sales performance.
+📅 November and December are among the strongest months in terms of sales.
+💰 Sales volume alone does not always indicate profitability.
+🎯 Business Recommendations
+
+Based on the findings, the business could:
+
+Review high-discount transactions
+Reduce excessive discounting, especially where margins are already low.
+Optimize product pricing
+Review pricing strategies for products and sub-categories with weak profitability.
+Focus on profitable products
+Increase attention and marketing efforts toward products with strong profit margins.
+Investigate loss-making categories
+Identify the reasons behind negative profitability and evaluate whether pricing, discounts, or costs should be adjusted.
+Prepare for peak sales periods
+Improve inventory and marketing planning ahead of high-performing months such as November and December.
+📊 Power BI Dashboard
+
+The Power BI dashboard provides an interactive view of:
+
+Sales Performance
+Profitability
+Regional Performance
+Category & Sub-Category Analysis
+Discount & Profitability Relationship
+Product Performance
+Time Trends
+
+📌 The dashboard is designed to help decision-makers quickly identify sales and profitability patterns.
+
+📁 Repository Structure
+superstore-sales-dashboard/
+│
+├── 01_clean_explore.py
+├── superstore_raw.csv
+├── superstore_clean.csv
+├── README.md
+│
+└── screenshots/
+    ├── dashboard_overview.png
+    ├── product_analysis.png
+    └── discount_analysis.png
+🚀 Future Improvements
+
+Possible future improvements include:
+
+Adding more advanced DAX measures
+Creating additional Power BI pages
+Adding customer segmentation
+Building sales forecasting
+Adding interactive drill-through analysis
+Automating the data cleaning pipeline
+👩‍💻 Author
+
+Hamsa Adel
+
+AI & Data Science Student
+Interested in Data Analysis, Business Intelligence, Python, SQL, and Power BI.
