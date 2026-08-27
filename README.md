@@ -155,11 +155,12 @@ superstore-sales-dashboard/
 ├── superstore_raw.csv
 ├── superstore_clean.csv
 ├── README.md
+├── ├── Superstore_Sales_Dashboard.pbix
 │
 └── screenshots/
-    ├── dashboard_overview.png
-    ├── product_analysis.png
-    └── discount_analysis.png
+    ├── Screenshot 2026-08-17 020948.png
+├── Screenshot 2026-08-17 021000.png
+├── Screenshot 2026-08-17 021012.png
 🚀 Future Improvements
 
 Possible future improvements include:
