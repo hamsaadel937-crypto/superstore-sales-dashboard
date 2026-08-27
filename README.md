@@ -119,18 +119,35 @@ Prepare for peak sales periods
 Improve inventory and marketing planning ahead of high-performing months such as November and December.
 📊 Power BI Dashboard
 
-The Power BI dashboard provides an interactive view of:
+## 📊 Power BI Dashboard
 
-Sales Performance
-Profitability
-Regional Performance
-Category & Sub-Category Analysis
-Discount & Profitability Relationship
-Product Performance
-Time Trends
+The interactive Power BI dashboard provides a comprehensive view of the Superstore business performance.
 
-📌 The dashboard is designed to help decision-makers quickly identify sales and profitability patterns.
+### Dashboard Preview
 
+<p align="center">
+  <img src="Screenshot%202026-08-17%20020948.png" width="90%">
+</p>
+
+### Additional Dashboard Views
+
+<p align="center">
+  <img src="Screenshot%202026-08-17%20021000.png" width="90%">
+</p>
+
+<p align="center">
+  <img src="Screenshot%202026-08-17%20021012.png" width="90%">
+</p>
+
+### Dashboard Includes
+
+- 📈 Sales & Profit KPIs
+- 💰 Profit Margin Analysis
+- 🌍 Regional Performance
+- 📦 Category & Sub-Category Analysis
+- 🏷️ Discount & Profitability Analysis
+- 📅 Monthly & Yearly Trends
+- 🔎 Product Performance
 📁 Repository Structure
 superstore-sales-dashboard/
 │
